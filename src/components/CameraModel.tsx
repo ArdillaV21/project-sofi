@@ -3,16 +3,18 @@ import { useFrame } from "@react-three/fiber"
 import {  Cylinder, Sphere, Text, RoundedBox } from "@react-three/drei"
 import { useLoader } from "@react-three/fiber"
 import {TextureLoader} from 'three'
+import * as THREE from "three";
+
 
 export default function CameraModel() {
-    const texture = useLoader(TextureLoader, '../../public/sofiafoto.heic')
+    const texture = useLoader(TextureLoader, '/sofiafoto.jpg')
     texture.repeat.set(1.2, 1.2) // Hace la imagen más pequeña (valores menores = imagen más pequeña)
     texture.center.set(0.5, 0.5) // Centra el punto de transformación
     texture.offset.set(0.15, 0.15) 
 
   const groupRef = useRef<THREE.Group | null>(null);
 
-  useFrame((state, delta) => {
+  useFrame((_, delta) => {
     if (groupRef.current) {
       groupRef.current.rotation.y += delta * 0.5
     }

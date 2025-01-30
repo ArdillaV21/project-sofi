@@ -6,7 +6,7 @@ export default function About() {
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-8 md:mb-0">
             <img
-              src="../../public/placeholder.svg"
+              src="/placeholder.svg"
               alt="Ana García"
               className="w-80 h-80 rounded-full shadow-lg object-cover"
             />

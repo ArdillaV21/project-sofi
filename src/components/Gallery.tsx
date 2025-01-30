@@ -36,12 +36,12 @@ const categories: Category[] = [
 ]
 
 const images: Image[] = [
-  { id: 1, src: "../../public/placeholder.svg?height=300&width=300", category: "portraits", title: "Retrato en el parque" },
-  { id: 2, src: "../../public/placeholder.svg?height=300&width=300", category: "weddings", title: "Boda en la playa" },
-  { id: 3, src: "../../public/placeholder.svg?height=300&width=300", category: "landscapes", title: "Atardecer en la montaña" },
-  { id: 4, src: "../../public/placeholder.svg?height=300&width=300", category: "portraits", title: "Retrato en estudio" },
-  { id: 5, src: "../../public/placeholder.svg?height=300&width=300", category: "weddings", title: "Ceremonia en la iglesia" },
-  { id: 6, src: "../../public/placeholder.svg?height=300&width=300", category: "landscapes", title: "Cascada en el bosque" },
+  { id: 1, src: "/placeholder.svg?height=300&width=300", category: "portraits", title: "Retrato en el parque" },
+  { id: 2, src: "/placeholder.svg?height=300&width=300", category: "weddings", title: "Boda en la playa" },
+  { id: 3, src: "/placeholder.svg?height=300&width=300", category: "landscapes", title: "Atardecer en la montaña" },
+  { id: 4, src: "/placeholder.svg?height=300&width=300", category: "portraits", title: "Retrato en estudio" },
+  { id: 5, src: "/placeholder.svg?height=300&width=300", category: "weddings", title: "Ceremonia en la iglesia" },
+  { id: 6, src: "/placeholder.svg?height=300&width=300", category: "landscapes", title: "Cascada en el bosque" },
 ]
 
 export default function Gallery() {
