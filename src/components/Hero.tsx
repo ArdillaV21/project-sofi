@@ -6,6 +6,7 @@ import { OrbitControls, PerspectiveCamera, Environment } from "@react-three/drei
 import { motion } from "framer-motion"
 import StarField from "./StarField"
 import CameraModel from "./CameraModel"
+import ScrollIndicator from "./Scroll-indicator"
 
 export default function Hero() {
   const starFieldRef = useRef<HTMLDivElement>(null)
@@ -60,18 +61,18 @@ export default function Hero() {
   }, [text, isDeleting, loopNum, typingSpeed])
 
   return (
-    <section className="relative h-screen bg-white overflow-hidden flex items-center justify-center">
+    <section className="relative h-screen bg-white overflow-hidden flex items-center justify-center w-full">
       <div ref={starFieldRef} className=" absolute inset-0" />
 
       {/* Contenedor principal, cambia de columna en móviles a fila en escritorio */}
-      <div className="w-full md:mb-10 container mx-auto h-full flex flex-col md:flex-row items-center justify-center px-4 relative z-10 gap-6">
+      <div className="w-full md:mb-10 container  h-full flex flex-col md:flex-row items-center justify-center px-4 relative z-10 gap-6">
         
         {/* Texto arriba en móvil, izquierda en escritorio */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-full md:mb-20 md:w-1/3 text-center md:text-left"
+          className=" w-full md:mb-20 md:w-1/3 text-center md:text-left"
         >
           <h1 className="text-2xl  w-full md:text-5xl font-bold md:p-4 text-gray-800">
             {text}
@@ -107,6 +108,11 @@ export default function Hero() {
           </Canvas>
         </div>
       </div>
+      {/* ScrollIndicator centrado en la parte inferior */}
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
+        <ScrollIndicator />
+      </div>
+
     </section>
   )
 }
