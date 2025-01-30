@@ -1,6 +1,6 @@
 import { useRef } from "react"
 import { useFrame } from "@react-three/fiber"
-import { Box, Cylinder, Sphere, Text, RoundedBox } from "@react-three/drei"
+import {  Cylinder, Sphere, Text, RoundedBox } from "@react-three/drei"
 import { useLoader } from "@react-three/fiber"
 import {TextureLoader} from 'three'
 
@@ -10,7 +10,7 @@ export default function CameraModel() {
     texture.center.set(0.5, 0.5) // Centra el punto de transformación
     texture.offset.set(0.15, 0.15) 
 
-  const groupRef = useRef()
+  const groupRef = useRef<THREE.Group | null>(null);
 
   useFrame((state, delta) => {
     if (groupRef.current) {
